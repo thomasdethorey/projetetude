@@ -1,5 +1,4 @@
 <?php
-require '../controllers/bankrollController.php';
 session_start();
 // Si l'utilisateur n'est pas connecté la page ne peut pas être affiché redirection vers l'accueil
 if (!isset($_SESSION['id'])) {
@@ -127,19 +126,7 @@ if (!isset($_SESSION['id'])) {
         <button id="redcolor" type="button" name="button"></button>
         <button id="blackcolor" type="button" name="button"></button>
         <button id="bluecolor" type="button" name="button"></button>
-        <p></p>
-        <?php if(isset($_SESSION['id'])) {
-           ?>
-        <form class="formulaire" action="" method="POST">
-        <label id="bankroll" for="bankroll">Bankroll </label>
-        <input id="inputnumber" type="number" name="bankroll"></input>
-        <label id="pseudo" for="pseudo">pseudo</label>
-        <input id="inputpseudo" type="text" name="pseudo" readonly="readonly" value="<?= $_SESSION['pseudo'] ?>"></input>
-        <label id="id" for="id">id</label>
-        <input id="inputid" type="text" name="id" readonly="readonly" value="<?= $_SESSION['id'] ?>"></input>
-        <input type="submit" class="btn btn-success" name="submit" value="VALIDER"></input>
-      </form>
-    <?php } ?>
+<p></p>
       </div>
     </div>
   </div>
